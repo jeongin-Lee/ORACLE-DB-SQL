@@ -1,10 +1,10 @@
---3¹ø (NVL2(COMM, COMM,'N/A')ÀÌ¶ó°í ÀÔ·ÂÇÏ¸é ÀÚ²Ù ¿À·ù°¡ ¶ß´Âµ¥ ÀÌÀ¯¸¦ ¸ð¸£°Ú½À´Ï´Ù.)
+--3ë²ˆ (NVL2(COMM, COMM,'N/A')ì´ë¼ê³  ìž…ë ¥í•˜ë©´ ì˜¤ë¥˜
 select empno,ename, hiredate,
-       to_char(NEXT_DAY(ADD_MONTHS(hiredate, 3), '¿ù¿äÀÏ'), 'yyyy-mm-dd') AS R_JOB,
+       to_char(NEXT_DAY(ADD_MONTHS(hiredate, 3), 'ì›”ìš”ì¼'), 'yyyy-mm-dd') AS R_JOB,
        NVL2(COMM, 'O','N/A') AS COMM 
 from emp;
 
---4¹ø ( KING°ªÀÌ 0000ÀÌ ³ª¿À´Âµ¥ ÀÌÀ¯¸¦ ¸ð¸£°Ú½À´Ï´Ù.) 
+--4ë²ˆ ( KINGê°’ì´ 0000ì´ ë‚˜ì˜´.) 
 SELECT EMPNO, ENAME, MGR,
         CASE
          WHEN MGR IS NULL THEN 0000
